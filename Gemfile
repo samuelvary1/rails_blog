@@ -43,4 +43,6 @@ gem 'debugger'
 
 gem "bcrypt", :require => "bcrypt"
 
-# test this commit
+gem "rmagick"
+
+gem "carrierwave"
