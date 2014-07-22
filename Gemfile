@@ -43,3 +43,4 @@ gem 'debugger'
 
 gem "bcrypt", :require => "bcrypt"
 
+# gem 'fuck you'
