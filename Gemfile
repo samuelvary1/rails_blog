@@ -43,4 +43,8 @@ gem 'debugger'
 
 gem "bcrypt", :require => "bcrypt"
 
+<<<<<<< HEAD
 # test this shit
+=======
+
+>>>>>>> 2dc74a4c4500733f2a9fc5160b5e80ece0399b4b
