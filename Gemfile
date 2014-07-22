@@ -43,4 +43,5 @@ gem 'debugger'
 
 gem "bcrypt", :require => "bcrypt"
 
-# took out gems, put in a comment
+# here is a change that I'm making on the uploader branch
+
