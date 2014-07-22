@@ -2,7 +2,7 @@
   <strong>Title:</strong>
   <%= simple_format @article.title %>
 </p>
- 
+<%= image_tag painting.image_url(:thumb) if painting.image? %>
 <p>
   <strong>Text:</strong>
   <%= simple_format @article.text %>
