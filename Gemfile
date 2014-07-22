@@ -43,4 +43,8 @@ gem 'debugger'
 
 gem "bcrypt", :require => "bcrypt"
 
+<<<<<<< HEAD
 # test this commit
+=======
+# took out gems, put in a comment
+>>>>>>> adding_uploader
