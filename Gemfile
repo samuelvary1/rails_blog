@@ -43,4 +43,6 @@ gem 'debugger'
 
 gem "bcrypt", :require => "bcrypt"
 
-# dildo gem
+gem "rmagick"
+
+gem "carrierwave"
