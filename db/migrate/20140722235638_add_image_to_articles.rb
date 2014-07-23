@@ -1,5 +1,8 @@
 class AddImageToArticles < ActiveRecord::Migration
   def change
-    add_column :image, :string
+  	create_table :images do |t|
+    t.string :article
+    t.string :filename
+  end
   end
 end
