@@ -3,7 +3,7 @@
 class ArticlesController < ApplicationController
 
 	def index
-		@articles = Article.order(:date)
+		@articles = Article.first
 	end
 
 	def new
