@@ -2,8 +2,10 @@
 
 class ArticlesController < ApplicationController
 
+	before_filter :validate_user
+	
 	def index
-		@articles = Article.first
+		@articles = Article.order('created_at DESC')
 	end
 
 	def new
@@ -30,10 +32,6 @@ class ArticlesController < ApplicationController
 	def show 
  		@article = Article.find(params[:id]) # However you are retrieving your @article  
 	end 
-
-	def index
-		@articles = Article.all
-	end
 
 	 def update
   	@article = Article.find(params[:id])

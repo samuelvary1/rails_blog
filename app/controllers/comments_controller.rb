@@ -1,6 +1,9 @@
 class CommentsController < ApplicationController  
-  http_basic_authenticate_with name: "sam.vary", password: "derpderp207", except:
-[:index, :show]
+  # placing filter here allows you to check the user before posting a 
+  # comment, using the method defined in application_controller.rb
+
+  before_filter :validate_user
+
   def create
     @article = Article.find(params[:article_id])
     @comment = @article.comments.create(comment_params)
