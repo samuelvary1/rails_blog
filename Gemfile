@@ -41,10 +41,10 @@ gem 'debugger'
 # gem 'debugger', group: [:development, :test]
 
 
-gem "bcrypt", :require => "bcrypt"
+gem 'bcrypt', :require => "bcrypt"
 
-gem "rmagick"
+gem 'rmagick'
 
-gem "carrierwave"
+gem 'carrierwave'
 
 gem 'cancan'

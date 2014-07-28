@@ -1,0 +1,29 @@
+<h1>Listing Images</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @image_uploaders.each do |image_uploader| %>
+      <tr>
+        <td><%= image_uploader.title %></td>
+        <td><%= image_uploader.description %></td>
+        <td><%= image_uploader.image %></td>
+        <td><%= link_to 'Show', image_uploader %></td>
+        <td><%= link_to 'Edit', edit_image_uploader_path(image_uploader) %></td>
+        <td><%= link_to 'Destroy', image_uploader, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'Add an image', new_image_uploader_path %>

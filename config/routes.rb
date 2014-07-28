@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :image_uploaders
+
   get 'sessions/new'
 
   resources :articles do
