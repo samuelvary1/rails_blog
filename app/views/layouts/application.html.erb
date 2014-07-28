@@ -1,3 +1,4 @@
+<!-- new user form -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,15 +11,27 @@
 
 <%= yield %>
 
-
+<!-- tells you who is logged in -->
 
 <div id="user_nav">
   <% if current_user %>
-    Logged in as <%= current_user.email %>.
+    Logged in as <%= current_user.email %>
+    
+  <br>
     <%= link_to "Log out", log_out_path %>
+  </br>
+  
   <% else %>
-    <center><%= link_to "Sign up", sign_up_path %> or
-    <%= link_to "log in", log_in_path %></center>
+  <center>
+
+    <%= link_to "sign up", sign_up_path %> or
+    <%= link_to "log in", log_in_path %>
+
+  <br>
+    <%= link_to "Home", root_path %>
+  </br>
+
+  </center>
   <% end %>
 </div>
 

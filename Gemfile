@@ -46,3 +46,5 @@ gem "bcrypt", :require => "bcrypt"
 gem "rmagick"
 
 gem "carrierwave"
+
+gem 'cancan'
