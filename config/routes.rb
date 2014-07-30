@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'sessions/new'
 
   resources :articles do
-    resources :comments
+    resources :comments, :images
   end
 
 

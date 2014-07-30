@@ -47,4 +47,4 @@ gem 'rmagick'
 
 gem 'carrierwave'
 
-gem 'cancan'
+gem 'mini_magick'

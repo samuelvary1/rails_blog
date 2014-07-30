@@ -9,7 +9,8 @@ class ArticlesController < ApplicationController
 	end
 
 	def new
-		@article = Article.new 
+		@article = Article.new
+		@image = Image.new 
 	end
 
 	def create
