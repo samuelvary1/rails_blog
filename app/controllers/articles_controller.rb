@@ -10,7 +10,6 @@ class ArticlesController < ApplicationController
 
 	def new
 		@article = Article.new
-		@image = Image.new 
 	end
 
 	def create
