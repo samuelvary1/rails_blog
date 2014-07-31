@@ -30,7 +30,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def show 
- 		@article = Article.find(params[:id]) # However you are retrieving your @article  
+ 		@article = Article.find(params[:id]) # However you are retrieving your @article
 	end 
 
 	 def update
