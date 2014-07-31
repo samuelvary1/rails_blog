@@ -1,8 +1,6 @@
 # app/controllers/articles_controller.rb
 
 class ArticlesController < ApplicationController
-
-	before_filter :validate_user
 	
 	def index
 		@articles = Article.order('created_at DESC')

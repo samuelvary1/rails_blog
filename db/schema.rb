@@ -31,11 +31,6 @@ ActiveRecord::Schema.define(version: 20140730175034) do
 
   add_index "comments", ["article_id"], name: "index_comments_on_article_id"
 
-  create_table "images", force: true do |t|
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "password_hash"
