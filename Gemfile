@@ -28,6 +28,12 @@ gem 'spring',        group: :development
 
 gem 'debugger'
 
+gem 'paperclip', '~> 3.0'
+
+gem 'rmagick'
+
+gem 'carrierwave'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -43,8 +49,4 @@ gem 'debugger'
 
 gem 'bcrypt', :require => "bcrypt"
 
-gem 'rmagick'
 
-gem 'carrierwave'
-
-gem 'mini_magick'

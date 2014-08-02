@@ -1,5 +1,7 @@
+# articles model
+
 class Article < ActiveRecord::Base
-	# this is where you define the class for methods in the controller
+  mount_uploader :image, ImageUploader 
   has_many :comments, dependent: :destroy
   validates :title, presence: true,
                     length: { minimum: 5 }
