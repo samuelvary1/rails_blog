@@ -1,7 +1,7 @@
 # Your User model
 
 class User < ActiveRecord::Base
-  attr_accessor :nickname, :password, :password_confirmation
+  attr_accessor :nickname, :password, :password_confirmation, :avatar_file_name
 
   before_save :encrypt_password
   
@@ -14,8 +14,6 @@ class User < ActiveRecord::Base
   # specify additional styles that you want to use in views or elsewhere
   has_attached_file :avatar, :styles => {:thumb => "100x100>"}
   # specify that the resume is a paperclip file attachment
-  
-  has_attached_file :resume
   def self.authenticate(email, password)
     user = find_by_email(email)
     if user && user.password_hash == BCrypt::Engine.hash_secret(password, user.password_salt)

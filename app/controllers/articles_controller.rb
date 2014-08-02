@@ -34,10 +34,10 @@ class ArticlesController < ApplicationController
 	def index
 		@articles = Article.order('created_at DESC')
 
-		respond_to do |format|
-			format.html
-			format.json { render json: @articles }
-		end
+		# respond_to do |format|
+		# 	format.html
+		# 	format.json { render json: @articles }
+		# end
 	end
 
 	def show 

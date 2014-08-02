@@ -7,7 +7,7 @@ Rails.application.routes.draw do
     resources :comments, :images
   end
 
-
+  resources :users
 
   get 'welcome/index'
 
@@ -17,6 +17,9 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
+  get "update_user" => "users#edit", :as => "update_user"
+
+  get "users_index" => "users#index", :as => "users_index"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
 
@@ -24,9 +27,6 @@ Rails.application.routes.draw do
 
   get "sign_up" => "users#new", :as => "sign_up"
   
-  
-  
-  resources :users
   
   resources :sessions
 

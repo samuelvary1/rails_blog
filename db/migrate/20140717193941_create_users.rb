@@ -5,6 +5,8 @@ class CreateUsers < ActiveRecord::Migration
       t.string :password_hash
       t.string :password_salt
 
+      t.attachment :avatar
+
       t.timestamps
     end
   end

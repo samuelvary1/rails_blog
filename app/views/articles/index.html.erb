@@ -1,8 +1,10 @@
 <!-- app/views/articles/index.html.erb -->
 
-<center><h3>¡Buenos Dias!</h3></center>
+<center><h2>Sam's Ruby on Rails Journal</h2></center>
 
 <center><%= link_to "New article", new_article_path %></center>
+<center><%= link_to "Home", root_path %></center>
+
 <table>
   <tr>
 
@@ -11,7 +13,7 @@
  
 <% @articles.each do |article| %>
   <tr>
-    <td><center><%= article.title %></center></td>
+    <td><%= article.title %></td>
     <td><%= simple_format article.text %></td>
     <td><%= link_to "Show", article_path(article) %></td>
     <td><%= link_to "Edit", edit_article_path(article) %></td>
@@ -23,7 +25,6 @@
 
 <!-- root_path is the method that takes you to the home page -->
 
-<center><%= link_to "Home", root_path %></center>
 
 
 
