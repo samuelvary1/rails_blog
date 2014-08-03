@@ -2,6 +2,7 @@ class CommentsController < ApplicationController
   # placing filter here allows you to check the user before posting a 
   # comment, using the method defined in application_controller.rb
 
+
   before_filter :validate_user
   
   def create

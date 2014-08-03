@@ -4,8 +4,7 @@
   <thead>
     <tr>
       <th>Email</th>
-      <th>Original Avatar</th>
-      <th>Thumbnail Avatar</th>
+      <th>Role(s)</th>
     </tr>
   </thead>
 
@@ -13,12 +12,11 @@
 	<% @users.each do |user| %>
       <tr>
         <td><%= user.email %></td>
-		<!-- display the avatar in both the original size and the thumbnail size -->
-		<td><%= image_tag user.avatar.url %></td>
-		<td><%= image_tag user.avatar.url(:thumb) %></td>
 		
     <% end %>
   </tbody>
 </table>
 <br>
+
+<%= link_to "Home", root_path %>
 

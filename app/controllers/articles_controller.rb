@@ -1,6 +1,7 @@
 # app/controllers/articles_controller.rb
 
 class ArticlesController < ApplicationController
+
 	helper_method :title
 	helper_method :image
 	helper_method :images
@@ -18,6 +19,7 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
+		@article.user = current_user
   	@article = Article.new(article_params)
  
   	if @article.save

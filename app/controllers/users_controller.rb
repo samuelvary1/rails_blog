@@ -2,6 +2,7 @@
 
 class UsersController < ApplicationController
   # GET /users
+
   def new
   	@user = User.new
   end
@@ -29,6 +30,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:email, :avatar, :password, :password_confirmation)
+    params.require(:user).permit(:email, :avatar, :password, :password_confirmation, :role)
   end
 end

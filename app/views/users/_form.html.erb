@@ -11,29 +11,37 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :email %><br>
+  <p>
+    <%= f.label :email, "Email Address" %><br>
     <%= f.text_field :email %>
-  </div>
+  </p>
 
-  <div class="field">
+  <p>
     <%= f.label :password %><br>
     <%= f.text_field :password %>
-  </div>
+  </p>
 
-  <div class="field">
+  <p>
     <%= f.label :password_confirmation %><br>
     <%= f.text_field :password_confirmation %>
-  </div>
+  </p>
 
   <!-- Upload your attachments via a simple file_fields in the form -->
 
-  <div class="field">
+  <p>
     <%= f.label :avatar %><br>
     <%= f.file_field :avatar %>
-  </div>
-  
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  </p>
+
+  <p>
+    <%= f.label :roles %><br />
+    <% for role in User::ROLES %>
+      <%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>
+      <%=h role.humanize %><br />
+      <% end %>
+      <%= hidden_field_tag "user[roles][]", "" %>
+  </p>
+
+  <p><%= f.submit "Sign up" %></p>
+
 <% end %>
