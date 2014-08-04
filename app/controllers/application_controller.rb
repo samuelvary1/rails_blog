@@ -4,7 +4,6 @@ class ApplicationController < ActionController::Base
 
   protect_from_forgery with: :exception
 
-  before_filter { |c| Authorization.current_user = c.current_user }
 
   helper_method :current_user
 

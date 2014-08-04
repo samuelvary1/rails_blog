@@ -13,26 +13,31 @@
 </p>
 
 <% unless @article.comments.empty? %>
-	<h2><%= pluralize(@article.comments.size, 'comment') %></h2>
+	<h4><%= pluralize(@article.comments.size, 'comment') %></h4>
 
 
-<div id="comments">
-  <% for comment in @article.comments %>
-    <div class="comment">
-      <em>on <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %></em>     
-      <%=simple_format comment.body %>
-    </div>
+  <div id="comments">
+    <% for comment in @article.comments %>
+      <div class="comment">
+        <b><%= comment.commenter %></b> wrote on <%= comment.created_at.strftime('%b %d, %Y at %H:%M') %>:    
+        <%=simple_format comment.body %>
+      </div>
+    <% end %>
   </div>
-  <% end %>
+  <p>
+    <%= link_to 'Destroy Comment', [comment.article, comment],
+               method: :delete,
+               data: { confirm: 'Are you sure?' } %>
+  </p>
 
-
-<h2>Add a comment:</h2>
-<%= render "comments/form" %>
-
-<p>
-	<%= link_to 'Edit Article', edit_article_path(@article) %> |
-	<%= link_to 'Delete Article', @article, :method => :delete, :confirm => "Are you sure?" %> |
-	<%= link_to 'Back to Articles', articles_path %>
-</p>
+  <p>
+  	<%= link_to 'Edit Article', edit_article_path(@article) %> |
+  	<%= link_to 'Delete Article', @article, :method => :delete, :confirm => "Are you sure?" %> |
+  	<%= link_to 'Back to Articles', articles_path %>
+  </p>
 
 <% end %>
+
+  <h2>Add a comment:</h2>
+  <%= render "comments/form" %>
+

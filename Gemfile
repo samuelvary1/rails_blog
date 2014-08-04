@@ -53,4 +53,10 @@ gem 'declarative_authorization'
 
 gem 'bcrypt', :require => "bcrypt"
 
+gem "binding_of_caller"
+
+group :development do
+  gem "better_errors"
+end
+
 

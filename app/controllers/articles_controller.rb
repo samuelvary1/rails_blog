@@ -19,7 +19,6 @@ class ArticlesController < ApplicationController
 	end
 
 	def create
-		@article.user = current_user
   	@article = Article.new(article_params)
  
   	if @article.save

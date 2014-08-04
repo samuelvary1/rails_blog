@@ -10,7 +10,7 @@ class UsersController < ApplicationController
   def create
     # params gathers them into a hash
     @user = User.new(user_params)
-
+    @user.role = params[:user][:roles].first
   	if @user.save
   		redirect_to root_url, :notice => "Signed up!"
   	else 
